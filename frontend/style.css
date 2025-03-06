@@ -1,0 +1,111 @@
+body {
+  font-family: "Courier New", monospace; /* Моноширинный шрифт */
+  font-weight: bold; /* Жирный шрифт */
+  background-color: #121212; /* Тёмный фон */
+  color: #ffffff; /* Белый текст */
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column; /* Элементы располагаются вертикально */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#calculator {
+  background-color: #1e1e1e; /* Тёмный фон калькулятора */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень */
+  width: 249px;
+}
+
+/* Базовый стиль кнопки калькулятора */
+.my-btn {
+  margin-right: 5px;           /* отступ от кнопки справа */
+  margin-top: 5px;             /* отступ от кнопки сверху */
+  width: 50px;                 /* ширина кнопки */
+  height: 50px;                /* высота кнопки */
+  border-radius: 0%;          /* округляем кнопку */
+  border: none;                /* отключаем обводку */
+  background: #6d435a;         /* бордовый цвет кнопки */
+  color: white;                /* белый цвет текста */
+  font-size: 1.5rem;           /* размер шрифта */
+  font-family: "Courier New", monospace; /* Моноширинный шрифт */
+  font-weight: bold; /* Жирный шрифт */
+  cursor: pointer;             /* курсор в виде указателя */
+  user-select: none;           /* запрет выделения текста */
+  transition: background 0.2s; /* плавное изменение цвета */
+}
+
+/* Состояние при наведении */
+.my-btn:hover {
+  background-color: #666666; /* Светло-серый при наведении */
+}
+
+/* Состояние при нажатии */
+.my-btn:active {
+  filter: brightness(130%); /* эффект вспышки */
+}
+
+/* Кнопки первостепенных операций (+, -, *, /) */
+.my-btn.primary {
+  background: #e83f6f; /* ярко-розовый цвет */
+}
+
+.my-btn.primary:hover {
+  background-color: #ffaa33; /* Более яркий оранжевый при наведении */
+}
+
+/* Кнопки второстепенных операций (C, +/-, %) */
+.my-btn.secondary {
+  background: #b56576; /* розово-бордовый цвет */
+}
+
+.my-btn.secondary:hover {
+  background-color: #f56d9f; /* Более яркий оранжевый при наведении */
+}
+
+
+/* Кнопка расчета (=) */
+.my-btn.execute {
+  width: 110px;          /* шире других кнопок */
+  border-radius: 20px;   /* скругление углов */
+  background: #e83f6f;   /* ярко-розовый цвет */
+}
+
+.my-btn.execute:hover {
+  background-color: #ffaa33; /* Более яркий зелёный при наведении */
+}
+
+/* Стиль для неактивных кнопок */
+.my-btn:disabled {
+  background:#b56576; /* Тёмный серый цвет */
+  cursor: not-allowed; /* Курсор "недоступно" */
+}
+
+/* Поле вывода результата */
+.result {
+  width: 235px;
+  height: 70px;
+  margin-bottom: 15px;         /* отступ снизу */
+  padding-right: 10px;        /* отступ справа */
+  background: #4a2c40;        /* темно-бордовый цвет фона */
+  text-align: right;          /* текст справа */
+  color: #ffffff;            /* белый цвет текста */
+  font-size: 2rem;
+  font-family: "Courier New", monospace; /* Моноширинный шрифт */
+  font-weight: bold; /* Жирный шрифт */
+  border-radius: 10px;        /* скругление углов */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* внутренняя тень */
+}
+
+footer {
+  text-align: center; /* Выравнивание по центру */
+  
+  font-family: "Courier New", monospace; /* Моноширинный шрифт */
+  font-weight: bold; /* Жирный шрифт */
+  font-size: 14px; /* Размер шрифта */
+  color: #ed4fa6; /* Цвет текста */
+}
